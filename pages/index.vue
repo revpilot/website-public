@@ -3,19 +3,11 @@
     <div>
       <Logo />
       <h1 class="title">
-        revpilot
+        RevPilot
       </h1>
-      <div class="links">
+      <div class="links">  
         <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
+          href="https://github.com/revpilot/"
           target="_blank"
           rel="noopener noreferrer"
           class="button--grey"

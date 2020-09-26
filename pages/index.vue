@@ -2,9 +2,7 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">
-        RevPilot
-      </h1>
+      <p class="lead">Coming soon...</p>
       <div class="links">  
         <a
           href="https://github.com/revpilot/"

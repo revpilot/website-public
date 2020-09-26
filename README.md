@@ -1,5 +1,10 @@
 # revpilot
 
+## Status
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/272d50e2-d2b6-4630-8c6b-39d7f710044d/deploy-status)](https://app.netlify.com/sites/revpilot/deploys)
+
+
 ## Build Setup
 
 ```bash

@@ -15,6 +15,14 @@ $ npm install
 # serve with hot reload at localhost:3000
 $ npm run dev
 
+# serve with netlify functions
+
+Install CLI
+https://github.com/netlify/cli/blob/master/docs/netlify-dev.md#netlify-functions
+
+$ npm run dev:netlify
+http://localhost:8888/.netlify/functions/contact
+
 # build for production and launch server
 $ npm run build
 $ npm run start

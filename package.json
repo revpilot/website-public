@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
+    "dev:netlify": "netlify dev",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"

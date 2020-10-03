@@ -14,7 +14,6 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 import nuxt_plugin_plugin_1b390e4e from 'nuxt_plugin_plugin_1b390e4e' // Source: ./components/plugin.js (mode: 'all')
 import nuxt_plugin_workbox_83d1926a from 'nuxt_plugin_workbox_83d1926a' // Source: ./workbox.js (mode: 'client')
-import nuxt_plugin_bootstrapvue_536d609e from 'nuxt_plugin_bootstrapvue_536d609e' // Source: ./bootstrap-vue.js (mode: 'all')
 import nuxt_plugin_pluginclient_8549a056 from 'nuxt_plugin_pluginclient_8549a056' // Source: ./content/plugin.client.js (mode: 'client')
 import nuxt_plugin_pluginserver_2314a15d from 'nuxt_plugin_pluginserver_2314a15d' // Source: ./content/plugin.server.js (mode: 'server')
 import nuxt_plugin_axios_1d19616f from 'nuxt_plugin_axios_1d19616f' // Source: ./axios.js (mode: 'all')
@@ -56,7 +55,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"RevPilot - CRM professionals","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"revpilot"},{"hid":"theme-color","name":"theme-color","content":"black"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"revpilot"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"revpilot"},{"hid":"og:description","name":"og:description","property":"og:description","content":"## Status"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"manifest","href":"\u002F_nuxt\u002Fmanifest.9f55f2e5.json"},{"rel":"shortcut icon","href":"favicon.ico"}],"style":[],"script":[],"htmlAttrs":{"lang":"en"}},
+    head: {"title":"RevPilot - CRM professionals","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"revpilot"},{"hid":"theme-color","name":"theme-color","content":"black"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"revpilot"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"revpilot"},{"hid":"og:description","name":"og:description","property":"og:description","content":"## Status"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"\u002Fcss\u002Ftheme.css"},{"rel":"stylesheet","href":"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Ffont-awesome\u002F5.13.0\u002Fcss\u002Fall.min.css"},{"rel":"stylesheet","href":"\u002Fcss\u002Fvendor.min.css"},{"rel":"manifest","href":"\u002F_nuxt\u002Fmanifest.9f55f2e5.json"},{"rel":"shortcut icon","href":"favicon.ico"}],"style":[],"script":[],"htmlAttrs":{"lang":"en"}},
 
     router,
     nuxt: {
@@ -176,10 +175,6 @@ async function createApp(ssrContext, config = {}) {
 
   if (process.client && typeof nuxt_plugin_workbox_83d1926a === 'function') {
     await nuxt_plugin_workbox_83d1926a(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_bootstrapvue_536d609e === 'function') {
-    await nuxt_plugin_bootstrapvue_536d609e(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_pluginclient_8549a056 === 'function') {

@@ -1,0 +1,34 @@
+.list {
+  @include list-unstyled();
+}
+
+.list-item {
+  margin-bottom: .6rem;
+  position: relative;
+
+  &.active:after {
+    content: "";
+    position: absolute;
+    left: -$card-spacer-x;
+    height: 100%;
+    width: 2px;
+    background: $purple;
+  }
+}
+
+//
+// Lists for RTL
+//
+
+body.rtl {
+  .list {
+    padding-right: 0;
+  }
+
+  .list-item {
+    &.active:after {
+      left: initial;
+      right: -$card-spacer-x;
+    }
+  }
+}

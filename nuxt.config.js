@@ -6,6 +6,12 @@ export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'RevPilot - CRM professionals',
+    bodyAttrs: {
+      class: 'bg-light',
+      'data-aos-easing': 'ease',
+      'data-aos-duration': 400,
+      'data-aos-delay': 0
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

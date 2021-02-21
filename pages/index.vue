@@ -1,30 +1,71 @@
 <template>
-  <div class="">
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-white"
-      role="navigation"
-    >
-      <div class="container position-relative">
-        <a class="navbar-brand" href="./index.html">
-          <Logo />
-        </a>
+  <div v-if="document">
+    <Nav />
+
+    <section class="bg-light pt-6 pt-md-7">
+      <div class="container text-center">
+        <div class="fx-fade-up animation-delay-1">
+          <h1
+            class="display-4 text-darkblue"
+            v-html="Dom.RichText.asText(document.title)"
+          ></h1>
+
+          <div
+            v-html="Dom.RichText.asHtml(document.description)"
+            class="w-lg-80 lead text-secondary mx-auto mt-4 mb-5"
+          ></div>
+          <a
+            href="#"
+            class="btn btn-success btn-lg w-lg-250 text-uppercase-bold-sm shadow-sm hover-lift-light"
+          >
+            <span v-html="document.cta_title"></span>
+          </a>
+        </div>
+
+        <img
+          :src="document.image.url"
+          class="img-fluid border border-gray-200 shadow-light-lg rounded-lg mt-6 mb-n9 fx-fade-up animation-delay-4"
+          alt=""
+        />
       </div>
-      <!-- end .container -->
-    </nav>
+    </section>
+
+    <section class="mt-12 mt-md-13 bg-white pb-lg-6 pt-lg-6">
+      <div class="container">
+        <h3
+          class="text-center text-primary text-uppercase-bold-sm line-height-lg"
+          v-html="Dom.RichText.asText(document.companies_help_text)"
+        ></h3>
+        <div class="row justify-content-between align-items-center mt-5">
+          <div
+            class="col-4 col-sm-3 col-lg-2"
+            v-for="(item, index) in document.commpanies_logos"
+            :key="index"
+          >
+            <div class="text-dark mx-auto img-fluid" style="width: 80%">
+              <a :href="item.link.url" target="_blank">
+                <img
+                  :src="item.image1.url"
+                  class="img-fluid bw1"
+                  :alt="item.name"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Hero -->
-    <section class="pt-5 pt-lg-8 pb-8 pb-lg-9">
+    <section class="pt-5 pt-lg-8 pb-2">
       <div class="container">
         <div class="row">
           <div
             class="col-lg-6 text-center text-lg-left fx-fade-up animation-delay-2"
           >
-            <h1
-              class="display-4 mt-4"
-              v-html="Dom.RichText.asText(document.title)"
-            ></h1>
+            <h1 class="display-5 mt-4" v-html="document.solutions_title"></h1>
             <div
-              v-html="Dom.RichText.asHtml(document.description)"
+              v-html="Dom.RichText.asHtml(document.solutions_description)"
               class="text-muted"
             ></div>
 
@@ -47,11 +88,11 @@
             <!-- Video card -->
             <div
               class="video-card card-skew-left h-300 overlay overlay-primary overlay-20"
-              :style="`background-image: url('${document.image.url}');`"
+              :style="`background-image: url('${document.solutions_video_image.url}');`"
             >
               <a
                 class="icon-circle icon-circle-lg bg-white text-darkblue hover-scale position-relative"
-                :href="document.video_url__youtube_"
+                :href="document.video_solutions_url"
                 data-fancybox
               >
                 <svg
@@ -82,72 +123,49 @@
       </div>
     </section>
 
-    <!-- Features #1 -->
-    <section class="bg-white py-7 pb-lg-8">
-      <div class="container text-center text-md-left">
-        <!-- Title -->
-        <h2
-          class="text-darkblue text-center "
-          v-html="Dom.RichText.asText(document.process_title)"
-        ></h2>
-
-        <!-- Features -->
-        <div class="row mt-5 mt-md-7">
-          <div
-            class="col-md-6 col-lg-4 mb-4 mb-md-6 text-center"
-            v-for="(item, index) in document.group_sales_process"
-            :key="index"
-          >
-            <div class="svg-icon svg-icon-lg text-primary">
-              <i
-                :class="`fab fa-${document.size_icons}x fas ${item.icon_sales_process} text-primary`"
-              ></i>
-            </div>
-            <h5 class="text-dark mt-4" v-html="item.process_n_title"></h5>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features #2 -->
-    <section class="py-7 py-lg-8">
+    <section class="bg-sky pt-7 pb-2 mt-6">
       <div class="container">
         <div class="row">
-          <div class="col-lg-5 text-center text-lg-left">
-            <h2 class="text-darkblue">
-              Work with your entire team effortlessly.
-            </h2>
-
-            <p class="text-secondary mt-4 pb-2">
-              Other people's views and troubles can be contagious. Don't
-              sabotage yourself by unwittingly adopting negative, unproductive
-              attitudes through your associations with others.
-            </p>
-
-            <p class="text-muted border-top mt-4 pt-4">
-              "Inertia Enterprise has been our best decisions to date. Our
-              team's efficiency is top notch."
-            </p>
-
-            <div class="text-darkblue">
-              <span class="avatar mr-2">
-                <img
-                  src="img/uifaces/9.jpg"
-                  class="avatar-image rounded-circle"
-                  alt=""
-                />
-              </span>
-              <span class="font-weight-bolder">Erika Williams</span>, Founder at
-              Stripe
-            </div>
+          <div class="col-lg-6">
+            <h2 class="mt-4" v-html="document.foundations_title"></h2>
+            <div
+              v-html="Dom.RichText.asHtml(document.solutions_description)"
+              class="text-muted"
+            ></div>
           </div>
+        </div>
 
-          <div class="col-lg-6 offset-lg-1 text-center mt-6 mt-lg-2">
-            <img
-              src="images/looker.png"
-              class="img-fluid card-skew-left rounded shadow-lg"
-              alt=""
-            />
+        <div class="row mt-5">
+          <!-- Story -->
+          <div
+            class="col-md-4 mb-5"
+            v-for="(item, index) in document.foundations_list"
+            :key="index"
+          >
+            <div class="card rounded-lg shadow-light hover-lift-light">
+              <div class="card-body">
+                <div
+                  class="d-block rounded bg-cover h-150"
+                  :style="`background-image: url('${item.foundation_image.url}');`"
+                ></div>
+                <div class="text-dark mt-4">
+                  <h4 v-html="item.foundation_title"></h4>
+                </div>
+                <div
+                  class="mt-3"
+                  v-html="Dom.RichText.asHtml(item.foundataion_description)"
+                ></div>
+              </div>
+              <div v-if="item.foundation_link">
+                <NuxtLink
+                  :to="item.foundation_link"
+                  class="card-footer-btn btn btn-purple btn-lg"
+                >
+                  <span class="text-uppercase-bold-sm"> View more </span>
+                  <i class="fa fa-arrow-right fa-sm ml-auto"></i>
+                </NuxtLink>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -160,226 +178,30 @@
           <div class="col-lg-8 offset-lg-1">
             <div class="media flex-column flex-lg-row align-items-center">
               <div class="icon-circle icon-circle-xl bg-darkblue text-white">
-                <svg
-                  width="24px"
-                  height="24px"
-                  viewBox="0 0 24 24"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                  <g
-                    stroke="none"
-                    stroke-width="1"
-                    fill="none"
-                    fill-rule="evenodd"
-                  >
-                    <rect x="0" y="0" width="24" height="24"></rect>
-                    <path
-                      d="M4,9.67471899 L10.880262,13.6470401 C10.9543486,13.689814 11.0320333,13.7207107 11.1111111,13.740321 L11.1111111,21.4444444 L4.49070127,17.526473 C4.18655139,17.3464765 4,17.0193034 4,16.6658832 L4,9.67471899 Z M20,9.56911707 L20,16.6658832 C20,17.0193034 19.8134486,17.3464765 19.5092987,17.526473 L12.8888889,21.4444444 L12.8888889,13.6728275 C12.9050191,13.6647696 12.9210067,13.6561758 12.9368301,13.6470401 L20,9.56911707 Z"
-                      fill="#000000"
-                    ></path>
-                    <path
-                      d="M4.21611835,7.74669402 C4.30015839,7.64056877 4.40623188,7.55087574 4.5299008,7.48500698 L11.5299008,3.75665466 C11.8237589,3.60013944 12.1762411,3.60013944 12.4700992,3.75665466 L19.4700992,7.48500698 C19.5654307,7.53578262 19.6503066,7.60071528 19.7226939,7.67641889 L12.0479413,12.1074394 C11.9974761,12.1365754 11.9509488,12.1699127 11.9085461,12.2067543 C11.8661433,12.1699127 11.819616,12.1365754 11.7691509,12.1074394 L4.21611835,7.74669402 Z"
-                      fill="#000000"
-                      opacity="0.3"
-                    ></path>
-                  </g>
-                </svg>
+                <img src="~/assets/logo/fww.svg" class="SalesSensei" />
               </div>
 
               <div class="media-body ml-lg-5 mt-4 mt-lg-0">
-                <h2 class="font-weight-normal text-darkblue">
-                  Build on the world's best platform
-                </h2>
-                <p class="text-muted mt-3 mb-0">
-                  Rely on the most innovative platform for the next generation
-                  of applications. Unlimited integrations and customization
-                  throughout.
-                </p>
+                <h2
+                  class="font-weight-normal text-darkblue"
+                  v-html="Dom.RichText.asText(document.feature_title_1)"
+                ></h2>
+                <div
+                  class="text-muted mt-3 mb-0"
+                  v-html="Dom.RichText.asHtml(document.feature_description_1)"
+                ></div>
               </div>
             </div>
           </div>
 
           <div class="col-lg-3 mt-5 mt-lg-0">
-            <a
-              href="#"
+            <NuxtLink
+              :to="document.feature_link_1"
               class="btn btn-purple btn-lg text-uppercase-bold-sm shadow-sm hover-lift"
             >
-              Start now
+              <span>{{ document.feature_link_title_1 }}</span>
               <i class="fa fa-chevron-right fa-xs ml-2"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="pt-7 pt-lg-8 pb-10">
-      <div class="container">
-        <h5 class="text-uppercase letter-spacing-lg text-center">
-          Trusted by <span class="text-success">thousands</span> of companies
-        </h5>
-
-        <div class="row mt-4 mt-lg-6">
-          <div class="col-lg-5">
-            <!-- Swiper -->
-            <div
-              class="swiper-container swiper-people"
-              data-toggle="swiper"
-              data-options='{ "effect": "fade", "grabCursor": true, "speed": 600, "loop": true }'
-            >
-              <div class="swiper-wrapper">
-                <!-- Slide -->
-                <div class="swiper-slide">
-                  <div
-                    class="bg-cover h-400 h-sm-500 rounded-lg"
-                    style="background-image: url('img/unsplash/21.jpeg')"
-                  ></div>
-                </div>
-
-                <!-- Slide -->
-                <div class="swiper-slide">
-                  <div
-                    class="bg-cover h-400 h-sm-500 rounded-lg"
-                    style="background-image: url('img/unsplash/3.jpeg')"
-                  ></div>
-                </div>
-
-                <!-- Slide -->
-                <div class="swiper-slide">
-                  <div
-                    class="bg-cover h-400 h-sm-500 rounded-lg"
-                    style="background-image: url('img/unsplash/23.jpeg')"
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-7 px-lg-5 pt-5 pt-lg-8">
-            <!-- Swiper -->
-            <div
-              class="swiper-container swiper-quotes"
-              data-toggle="swiper"
-              data-options='{ "grabCursor": true, "speed": 600, "loop": true, "navigation": { "nextEl": ".swiper-custom-button-next", "prevEl": ".swiper-custom-button-prev" } }'
-            >
-              <div class="swiper-wrapper">
-                <!-- Slide -->
-                <div class="swiper-slide text-center">
-                  <h3 class="font-weight-normal text-darkblue">
-                    “Don't demand that things happen as you wish, but wish that
-                    they happen as they do happen, and you will go on well.”
-                  </h3>
-                  <h5 class="font-weight-normal mt-4">Seneca the younger</h5>
-                  <p class="text-muted font-size-sm">
-                    <span class="svg-icon text-muted"
-                      ><svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="512"
-                        height="512"
-                        viewBox="0 0 512 512"
-                      >
-                        <title>ionicons-v5-e</title>
-                        <line
-                          x1="400"
-                          y1="256"
-                          x2="112"
-                          y2="256"
-                          style="
-                            fill: none;
-                            stroke: #000;
-                            stroke-linecap: round;
-                            stroke-linejoin: round;
-                            stroke-width: 32px;
-                          "
-                        /></svg
-                    ></span>
-                    Lead Philosoper, GitHub
-                  </p>
-                </div>
-
-                <!-- Slide -->
-                <div class="swiper-slide text-center">
-                  <h3 class="font-weight-normal text-darkblue">
-                    “Sickness is a hindrance to the body, but not to your
-                    ability to choose, unless that is your choice. Lameness is a
-                    hindrance to the leg, but not to your ability to choose.”
-                  </h3>
-                  <h5 class="font-weight-normal mt-4">Epictetus</h5>
-                  <p class="text-muted font-size-sm">
-                    <span class="svg-icon text-muted"
-                      ><svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="512"
-                        height="512"
-                        viewBox="0 0 512 512"
-                      >
-                        <title>ionicons-v5-e</title>
-                        <line
-                          x1="400"
-                          y1="256"
-                          x2="112"
-                          y2="256"
-                          style="
-                            fill: none;
-                            stroke: #000;
-                            stroke-linecap: round;
-                            stroke-linejoin: round;
-                            stroke-width: 32px;
-                          "
-                        /></svg
-                    ></span>
-                    Head of Philosophy, Dribbble
-                  </p>
-                </div>
-
-                <!-- Slide -->
-                <div class="swiper-slide text-center">
-                  <h3 class="font-weight-normal text-darkblue">
-                    “Remember that you must behave in life as at a dinner party.
-                    Is anything brought around to you? Put out your hand and
-                    take your share with moderation.”
-                  </h3>
-                  <h5 class="font-weight-normal mt-4">Socrates</h5>
-                  <p class="text-muted font-size-sm">
-                    <span class="svg-icon text-muted"
-                      ><svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="512"
-                        height="512"
-                        viewBox="0 0 512 512"
-                      >
-                        <title>ionicons-v5-e</title>
-                        <line
-                          x1="400"
-                          y1="256"
-                          x2="112"
-                          y2="256"
-                          style="
-                            fill: none;
-                            stroke: #000;
-                            stroke-linecap: round;
-                            stroke-linejoin: round;
-                            stroke-width: 32px;
-                          "
-                        /></svg
-                    ></span>
-                    Senior Philosoper, Stripe
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Pagination -->
-            <div class="d-flex justify-content-center mt-4">
-              <a href="#" class="swiper-custom-button-prev text-dark">
-                <i class="fas fa-arrow-left fa-lg"></i>
-              </a>
-              <a href="#" class="swiper-custom-button-next text-dark ml-4">
-                <i class="fas fa-arrow-right fa-lg"></i>
-              </a>
-            </div>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -526,18 +348,23 @@ export default {
       const result = await api.getSingle("homepage");
       document = result.data;
 
-      if (process.client) window.prismic.setupEditButton();
+      //      if (process.client) window.prismic.setupEditButton();
 
       return {
         document,
         documentId: result.id,
       };
     } catch (e) {
-      error({ statusCode: 404, message: "Page not found" });
+      error({ statusCode: 404, message: e });
     }
   },
 };
 </script>
 
 <style>
+img.bw1 {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  opacity: 0.8;
+}
 </style>

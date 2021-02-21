@@ -1,5 +1,5 @@
 <template>
-  <img src="~/assets/logo/logo.svg" class="logo" />
+  <img src="~/assets/logo/salesensei.svg" class="logo" />
 </template>
 
 <style>

@@ -1,5 +1,33 @@
 [
   {
+    "name": "about",
+    "path": "/about",
+    "component": "/Users/migue/Documents/dev/revpilot/web/pages/about.vue",
+    "chunkName": "pages/about",
+    "_name": "_6079818a"
+  },
+  {
+    "name": "contact",
+    "path": "/contact",
+    "component": "/Users/migue/Documents/dev/revpilot/web/pages/contact.vue",
+    "chunkName": "pages/contact",
+    "_name": "_2a9c1b5d"
+  },
+  {
+    "name": "solutions",
+    "path": "/solutions",
+    "component": "/Users/migue/Documents/dev/revpilot/web/pages/solutions.vue",
+    "chunkName": "pages/solutions",
+    "_name": "_7b7b3717"
+  },
+  {
+    "name": "strategy",
+    "path": "/strategy",
+    "component": "/Users/migue/Documents/dev/revpilot/web/pages/strategy.vue",
+    "chunkName": "pages/strategy",
+    "_name": "_69dea486"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/migue/Documents/dev/revpilot/web/pages/index.vue",

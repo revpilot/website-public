@@ -5,7 +5,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'RevPilot - CRM professionals',
+    title: 'Sales Sensei - Enabling world-class Sales & Marketing Execution',
     bodyAttrs: {
       class: 'bg-light',
       'data-aos-easing': 'ease',
@@ -21,7 +21,8 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: "stylesheet", href: "/css/theme.css" },
       { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" },
-      { rel: "stylesheet", href: "/css/vendor.min.css" }
+      { rel: "stylesheet", href: "/css/vendor.min.css" },
+      { rel: "stylesheet", href: "/vendor/jarallax/dist/jarallax.css" },
     ],
     script: [
       { src: "//static.cdn.prismic.io/prismic.min.js" },

@@ -2,35 +2,44 @@
   <div v-if="document">
     <Nav />
 
-    <section class="bg-light pt-6 pt-md-7">
-      <div class="container text-center">
-        <div class="fx-fade-up animation-delay-1">
-          <h1
-            class="display-4 text-darkblue"
-            v-html="Dom.RichText.asText(document.title)"
-          ></h1>
+    <!-- Hero -->
+    <section
+      class="bg-cover position-relative overlay overlay-dark overlay-40 py-6 py-lg-9 py-l-8 jarallax"
+      data-jarallax
+      data-speed="0.8"
+      :style="`background-image: url('${document.image.url}');`"
+    >
+      <!-- SVG divider -->
+      <div class="svg-divider svg-divider-bottom text-white">
+        <svg
+          preserveAspectRatio="none"
+          viewBox="0 0 2000 350"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polygon fill="currentColor" points="2000 0 2000 350 0 350"></polygon>
+        </svg>
+      </div>
 
-          <div
-            v-html="Dom.RichText.asHtml(document.description)"
-            class="w-lg-80 lead text-secondary mx-auto mt-4 mb-5"
-          ></div>
-          <a
-            href="#"
-            class="btn btn-success btn-lg w-lg-250 text-uppercase-bold-sm shadow-sm hover-lift-light"
-          >
-            <span v-html="document.cta_title"></span>
-          </a>
-        </div>
-
-        <img
-          :src="document.image.url"
-          class="img-fluid border border-gray-200 shadow-light-lg rounded-lg mt-6 mb-n9 fx-fade-up animation-delay-4"
-          alt=""
-        />
+      <div class="container my-6 my-xxl-4 fx-fade-up animation-delay-3">
+        <h1 class="text-white text-uppercase-bold-sm">SalesSensei</h1>
+        <h2
+          class="display-4 text-white w-lg-75 my-4"
+          v-html="Dom.RichText.asText(document.title)"
+        ></h2>
+        <div
+          v-html="Dom.RichText.asHtml(document.description)"
+          class="lead text-white mx-auto mt-4 mb-5"
+        ></div>
+        <NuxtLink
+          to="contact"
+          class="btn btn-lg btn-info rounded-pill text-uppercase-bold-sm shadow hover-lift"
+        >
+          <span v-html="document.cta_title"></span>
+        </NuxtLink>
       </div>
     </section>
 
-    <section class="mt-12 mt-md-13 bg-white pb-lg-6 pt-lg-6">
+    <section class="bg-white pb-lg-6">
       <div class="container">
         <h3
           class="text-center text-primary text-uppercase-bold-sm line-height-lg"
@@ -42,7 +51,7 @@
             v-for="(item, index) in document.commpanies_logos"
             :key="index"
           >
-            <div class="text-dark mx-auto img-fluid" style="width: 80%">
+            <div class="text-dark mx-auto img-fluid" style="width: 70%">
               <a :href="item.link.url" target="_blank">
                 <img
                   :src="item.image1.url"
@@ -123,11 +132,11 @@
       </div>
     </section>
 
-    <section class="bg-sky pt-7 pb-2 mt-6">
+    <section class="bg-white pt-7 pb-2 mt-6">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h2 class="mt-4" v-html="document.foundations_title"></h2>
+        <div class="row align-items-center text-center">
+          <div class="col-lg-12">
+            <h2 class="" v-html="document.foundations_title"></h2>
             <div
               v-html="Dom.RichText.asHtml(document.solutions_description)"
               class="text-muted"

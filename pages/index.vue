@@ -131,19 +131,42 @@
         </div>
       </div>
     </section>
-
-    <section class="bg-white pt-7 pb-2 mt-6">
-      <div class="container">
-        <div class="row align-items-center text-center">
-          <div class="col-lg-12">
-            <h2 class="" v-html="document.foundations_title"></h2>
-            <div
-              v-html="Dom.RichText.asHtml(document.solutions_description)"
-              class="text-muted"
-            ></div>
-          </div>
+    <!-- Sales execution foundations -->
+    <section class="pt-9 pb-2 bg-white">
+      <div class="container text-center">
+        <h2 class="text-darkblue" v-html="document.foundations_title"></h2>
+        <div class="svg-icon svg-icon-xl text-purple">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="512"
+            height="512"
+            viewBox="0 0 512 512"
+          >
+            <title>ionicons-v5-e</title>
+            <line
+              x1="400"
+              y1="256"
+              x2="112"
+              y2="256"
+              style="
+                fill: none;
+                stroke: #000;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 32px;
+              "
+            ></line>
+          </svg>
         </div>
+        <div
+          v-html="Dom.RichText.asHtml(document.solutions_description)"
+          class="text-secondary w-lg-60 mx-auto mt-2"
+        ></div>
+      </div>
+    </section>
 
+    <section class="bg-white pt-2 pb-2">
+      <div class="container">
         <div class="row mt-5">
           <!-- Story -->
           <div
@@ -180,13 +203,13 @@
       </div>
     </section>
 
-    <!-- Call to action -->
-    <section class="bg-white py-7 py-lg-8">
+    <!-- Managed sales transformation from start to finish -->
+    <section class="py-7 py-lg-8 ">
       <div class="container">
         <div class="row align-items-center text-center text-lg-left">
           <div class="col-lg-8 offset-lg-1">
             <div class="media flex-column flex-lg-row align-items-center">
-              <div class="icon-circle icon-circle-xl bg-darkblue text-white">
+              <div class="icon-circle icon-circle-xl text-white">
                 <img src="~/assets/logo/fww.svg" class="SalesSensei" />
               </div>
 
@@ -215,6 +238,45 @@
         </div>
       </div>
     </section>
+
+
+      <!-- Managed sales transformation from start to finish -->
+    <section class="pb-8 pt-2 ">
+      <div class="container">
+        <div class="row align-items-center text-center text-lg-left">
+          <div class="col-lg-8 offset-lg-1">
+            <div class="media flex-column flex-lg-row align-items-center">
+              <div class="icon-circle icon-circle-xl text-white">
+                <img src="~/assets/logo/fww.svg" class="SalesSensei" />
+              </div>
+
+              <div class="media-body ml-lg-5 mt-4 mt-lg-0">
+                <h2
+                  class="font-weight-normal text-darkblue"
+                  v-html="Dom.RichText.asText(document.feature_title_2)"
+                ></h2>
+                <div
+                  class="text-muted mt-3 mb-0"
+                  v-html="Dom.RichText.asHtml(document.feature_description_2)"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 mt-5 mt-lg-0">
+            <NuxtLink
+              :to="document.feature_link_2"
+              class="btn btn-purple btn-lg text-uppercase-bold-sm shadow-sm hover-lift"
+            >
+              <span>{{ document.feature_link_title_2 }}</span>
+              <i class="fa fa-chevron-right fa-xs ml-2"></i>
+            </NuxtLink>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
 
     <!-- Contact form -->
     <section class="bg-dark position-relative pt-4" id="contact">

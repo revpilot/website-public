@@ -8,4 +8,5 @@ You can directly use them in pages and other components without the need to impo
 
 - `<Footer>` | `<footer>` (components/Footer.vue)
 - `<Logo>` | `<logo>` (components/Logo.vue)
+- `<LogoColour>` | `<logo-colour>` (components/LogoColour.vue)
 - `<Nav>` | `<nav>` (components/Nav.vue)

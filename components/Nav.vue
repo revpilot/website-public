@@ -1,9 +1,8 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-white" role="navigation">
     <div class="container position-relative">
-      <a class="navbar-brand" href="./index.html">
-        <Logo />
-      </a>
+      <logo-colour size="240px" />
+
       <button
         class="navbar-toggler"
         data-toggle="collapse"

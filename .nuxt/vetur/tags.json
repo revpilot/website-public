@@ -5,6 +5,9 @@
   "Logo": {
     "description": "Auto imported from components/Logo.vue"
   },
+  "LogoColour": {
+    "description": "Auto imported from components/LogoColour.vue"
+  },
   "Nav": {
     "description": "Auto imported from components/Nav.vue"
   }

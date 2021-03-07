@@ -6,8 +6,12 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _6079818a = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
 const _2a9c1b5d = () => interopDefault(import('../pages/contact.vue' /* webpackChunkName: "pages/contact" */))
-const _7b7b3717 = () => interopDefault(import('../pages/solutions.vue' /* webpackChunkName: "pages/solutions" */))
+const _fc6fb276 = () => interopDefault(import('../pages/privacy.vue' /* webpackChunkName: "pages/privacy" */))
+const _031c5f4c = () => interopDefault(import('../pages/solutions/index.vue' /* webpackChunkName: "pages/solutions/index" */))
+const _17f955aa = () => interopDefault(import('../pages/solutions2.vue' /* webpackChunkName: "pages/solutions2" */))
 const _69dea486 = () => interopDefault(import('../pages/strategy.vue' /* webpackChunkName: "pages/strategy" */))
+const _2a2f1a84 = () => interopDefault(import('../pages/terms.vue' /* webpackChunkName: "pages/terms" */))
+const _3de7bd7c = () => interopDefault(import('../pages/solutions/_id.vue' /* webpackChunkName: "pages/solutions/_id" */))
 const _ff9d4762 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -30,13 +34,29 @@ export const routerOptions = {
     component: _2a9c1b5d,
     name: "contact"
   }, {
+    path: "/privacy",
+    component: _fc6fb276,
+    name: "privacy"
+  }, {
     path: "/solutions",
-    component: _7b7b3717,
+    component: _031c5f4c,
     name: "solutions"
+  }, {
+    path: "/solutions2",
+    component: _17f955aa,
+    name: "solutions2"
   }, {
     path: "/strategy",
     component: _69dea486,
     name: "strategy"
+  }, {
+    path: "/terms",
+    component: _2a2f1a84,
+    name: "terms"
+  }, {
+    path: "/solutions/:id",
+    component: _3de7bd7c,
+    name: "solutions-id"
   }, {
     path: "/",
     component: _ff9d4762,

@@ -3,35 +3,54 @@
     "name": "about",
     "path": "/about",
     "component": "/Users/migue/Documents/dev/revpilot/web/pages/about.vue",
-    "chunkName": "pages/about",
-    "_name": "_6079818a"
+    "chunkName": "pages/about"
   },
   {
     "name": "contact",
     "path": "/contact",
     "component": "/Users/migue/Documents/dev/revpilot/web/pages/contact.vue",
-    "chunkName": "pages/contact",
-    "_name": "_2a9c1b5d"
+    "chunkName": "pages/contact"
+  },
+  {
+    "name": "privacy",
+    "path": "/privacy",
+    "component": "/Users/migue/Documents/dev/revpilot/web/pages/privacy.vue",
+    "chunkName": "pages/privacy"
   },
   {
     "name": "solutions",
     "path": "/solutions",
-    "component": "/Users/migue/Documents/dev/revpilot/web/pages/solutions.vue",
-    "chunkName": "pages/solutions",
-    "_name": "_7b7b3717"
+    "component": "/Users/migue/Documents/dev/revpilot/web/pages/solutions/index.vue",
+    "chunkName": "pages/solutions/index"
+  },
+  {
+    "name": "solutions2",
+    "path": "/solutions2",
+    "component": "/Users/migue/Documents/dev/revpilot/web/pages/solutions2.vue",
+    "chunkName": "pages/solutions2"
   },
   {
     "name": "strategy",
     "path": "/strategy",
     "component": "/Users/migue/Documents/dev/revpilot/web/pages/strategy.vue",
-    "chunkName": "pages/strategy",
-    "_name": "_69dea486"
+    "chunkName": "pages/strategy"
+  },
+  {
+    "name": "terms",
+    "path": "/terms",
+    "component": "/Users/migue/Documents/dev/revpilot/web/pages/terms.vue",
+    "chunkName": "pages/terms"
+  },
+  {
+    "name": "solutions-id",
+    "path": "/solutions/:id",
+    "component": "/Users/migue/Documents/dev/revpilot/web/pages/solutions/_id.vue",
+    "chunkName": "pages/solutions/_id"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/migue/Documents/dev/revpilot/web/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_ff9d4762"
+    "chunkName": "pages/index"
   }
 ]

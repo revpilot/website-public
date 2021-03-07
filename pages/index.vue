@@ -55,7 +55,7 @@
               <a :href="item.link.url" target="_blank">
                 <img
                   :src="item.image1.url"
-                  class="img-fluid bw1"
+                  class="img-fluid"
                   :alt="item.name"
                 />
               </a>
@@ -165,12 +165,12 @@
       </div>
     </section>
 
-    <section class="bg-white pt-2 pb-2">
+    <section class="bg-white pt-2 pb-2 text-center">
       <div class="container">
         <div class="row mt-5">
           <!-- Story -->
           <div
-            class="col-md-4 mb-5"
+            class="col-md-6 mb-5"
             v-for="(item, index) in document.foundations_list"
             :key="index"
           >
@@ -203,8 +203,7 @@
       </div>
     </section>
 
-    <!-- Managed sales transformation from start to finish -->
-    <section class="py-7 py-lg-8 ">
+    <!--     <section class="py-7 py-lg-8">
       <div class="container">
         <div class="row align-items-center text-center text-lg-left">
           <div class="col-lg-8 offset-lg-1">
@@ -239,9 +238,7 @@
       </div>
     </section>
 
-
-      <!-- Managed sales transformation from start to finish -->
-    <section class="pb-8 pt-2 ">
+    <section class="pb-8 pt-2">
       <div class="container">
         <div class="row align-items-center text-center text-lg-left">
           <div class="col-lg-8 offset-lg-1">
@@ -274,13 +271,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-
-
-    <!-- Contact form -->
-    <section class="bg-dark position-relative pt-4" id="contact">
-      <!-- SVG divider -->
+    <!-- <section class="bg-dark position-relative pt-4" id="contact">
       <div class="svg-divider svg-divider-top text-light">
         <svg
           preserveAspectRatio="none"
@@ -389,10 +382,10 @@
           </form>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
-    <footer class="footer footer-dark bg-dark pt-8">
+    <footer class="footer footer-dark bg-dark pt-6">
       <Footer />
     </footer>
   </div>
@@ -419,7 +412,6 @@ export default {
       const result = await api.getSingle("homepage");
       document = result.data;
 
-      //      if (process.client) window.prismic.setupEditButton();
 
       return {
         document,

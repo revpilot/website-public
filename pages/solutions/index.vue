@@ -149,7 +149,7 @@
         <div class="row mt-5">
           <div
             class="col-md-4 mb-5"
-            v-for="(item, index) in document.enablement_items"
+            v-for="(item, index) in document.transformation_items"
             :key="index"
           >
             <div class="card rounded-lg shadow-light hover-lift-light">

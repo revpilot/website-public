@@ -27,7 +27,7 @@
           </li>
           <li class="nav-item dropdown">
             <NuxtLink
-              to="about"
+              to="/about"
               class="nav-link"
               data-toggle="dropdown"
               aria-expanded="false"
@@ -37,7 +37,7 @@
           </li>
           <li class="nav-item dropdown">
             <NuxtLink
-              to="solutions"
+              to="/solutions"
               class="nav-link"
               data-toggle="dropdown"
               aria-expanded="false"
@@ -47,7 +47,7 @@
           </li>
           <li class="nav-item ml-lg-3 mt-3 mt-lg-0">
             <NuxtLink
-              to="contact"
+              to="/contact"
               class="nav-link"
               data-toggle="dropdown"
               aria-expanded="false"

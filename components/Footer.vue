@@ -3,9 +3,11 @@
     <div class="row">
       <div class="col-12 col-md mt-5 mt-md-0">
         <h6 class="footer-header mb-4 pb-md-2">Sales Sensei</h6>
-        <a href="#" class="footer-link mt-2"> Solutions</a>
-        <a href="#" class="footer-link mt-2"> About us</a>
-        <a href="#" class="footer-link mt-2"> Contact Us </a>
+        <NuxtLink to="/solutions" class="footer-link mt-2">
+          Solutions
+        </NuxtLink>
+        <NuxtLink to="/about" class="footer-link mt-2"> About us </NuxtLink>
+        <NuxtLink to="/contact" class="footer-link mt-2"> Contact us </NuxtLink>
       </div>
     </div>
 
@@ -36,11 +38,11 @@
         All rights reserved. © {{ new Date().getFullYear() }}
       </p>
       <div class="d-flex justify-content-center">
-        <NuxtLink to="privacy" class="footer-text mx-3"
+        <NuxtLink to="/privacy" class="footer-text mx-3"
           >Privacy & terms
         </NuxtLink>
 
-        <NuxtLink to="terms" class="footer-text mx-3"
+        <NuxtLink to="/terms" class="footer-text mx-3"
           >Terms of service
         </NuxtLink>
       </div>

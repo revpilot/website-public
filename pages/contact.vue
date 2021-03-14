@@ -52,7 +52,7 @@
         <div
           class="bg-white w-lg-60 rounded shadow-light-lg mx-auto py-5 px-4 px-md-6"
         >
-          <form name="contact" method="POST" netlify>
+          <form name="contact"  method="POST" netlify>
             <div class="form-group">
               <label class="text-dark"> Your name </label>
               <input
@@ -70,10 +70,7 @@
                 placeholder="Company Email address"
                 v-model="formdata.email"
               />
-              <div
-                class="errorEmail mt-3 mb-3"
-                v-if="isEmailValid() === 'has-error'"
-              >
+              <div class="errorEmail mt-3 mb-3" v-if="isEmailValid() === 'has-error'">
                 Please write a valid email
               </div>
             </div>
@@ -175,17 +172,10 @@ export default {
     },
     async submit() {
       this.sending = true;
-      const headers = {
-        "Content-Type": "application/x-www-form-urlencoded",
-      };
-
       try {
         const res = await this.$axios.$post(
-          `/`,
-          new URLSearchParams(this.formdata).toString(),
-          {
-            headers: headers,
-          }
+          `${process.env.emailUrl}`,
+          this.formdata,
         );
         console.log("res", res);
         this.sending = false;
@@ -216,7 +206,7 @@ export default {
 </script>
 
 <style scoped>
-.errorEmail {
-  color: red;
+.errorEmail{
+  color:red
 }
 </style>

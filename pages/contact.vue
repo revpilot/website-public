@@ -52,7 +52,7 @@
         <div
           class="bg-white w-lg-60 rounded shadow-light-lg mx-auto py-5 px-4 px-md-6"
         >
-          <form>
+          <form name="contact"  method="POST" netlify>
             <div class="form-group">
               <label class="text-dark"> Your name </label>
               <input

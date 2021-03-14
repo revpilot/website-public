@@ -42,11 +42,11 @@
     "_name": "_69dea486"
   },
   {
-    "name": "terms",
-    "path": "/terms",
-    "component": "/Users/migue/Documents/dev/revpilot/web/pages/terms.vue",
-    "chunkName": "pages/terms",
-    "_name": "_2a2f1a84"
+    "name": "thank-you",
+    "path": "/thank-you",
+    "component": "/Users/migue/Documents/dev/revpilot/web/pages/thank-you.vue",
+    "chunkName": "pages/thank-you",
+    "_name": "_b824428e"
   },
   {
     "name": "solutions-id",

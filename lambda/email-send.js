@@ -1,10 +1,24 @@
 import { Mail } from "./utils/mail.js";
 
 const mail = new Mail();
-
+const headers = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'Content-Type',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'
+};
 
 
 exports.handler = async event => {
+
+  if (event.httpMethod === "OPTIONS") {
+
+    return {
+      statusCode: 200,
+      headers,
+      body: 'This was a preflight call!'
+    };
+  }
+
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 410,
@@ -25,20 +39,21 @@ exports.handler = async event => {
         <strong>Message:</strong>  ${dataEvent.message}.<br>
         `
 
-    console.log(dataEvent);
 
 
     const result = await mail.sendMail({
-      from: `Rev Pilot <miguel@revpilot.co.uk>`,
+      from: `Miguel Puig <miguel@revpilot.co.uk>`,
       to: `miguel@revpilot.co.uk`,
       content: contentEmail,
       subject: `New contact revpilot.co.uk`,
-      bcc: ''
+      bcc: 'anish@revpilot.co.uk'
     });
+
 
 
     return {
       statusCode: 200,
+      headers,
       body: JSON.stringify(result)
     };
   } catch (err) {

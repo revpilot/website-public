@@ -99,6 +99,9 @@ export default {
       },
     };
   },
+  created() {
+    this.$loadJSFiles();
+  },
   mounted() {},
   async asyncData({ app, context, error, req, params, query, store }) {
     try {

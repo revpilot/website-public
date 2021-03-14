@@ -43,7 +43,7 @@
               v-html="Dom.RichText.asHtml(document.sales_operations_title)"
             ></div>
             <div
-         class="mt-4 text-dark"
+              class="mt-4 text-dark"
               v-html="Dom.RichText.asHtml(document.sales_ops_small_description)"
             ></div>
           </div>
@@ -85,7 +85,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div
-               class="mt-4 text-dark"
+              class="mt-4 text-dark"
               v-html="Dom.RichText.asHtml(document.sales_enablement_title)"
             ></div>
             <div

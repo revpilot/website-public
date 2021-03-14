@@ -10,7 +10,7 @@ const _fc6fb276 = () => interopDefault(import('../pages/privacy.vue' /* webpackC
 const _031c5f4c = () => interopDefault(import('../pages/solutions/index.vue' /* webpackChunkName: "pages/solutions/index" */))
 const _17f955aa = () => interopDefault(import('../pages/solutions2.vue' /* webpackChunkName: "pages/solutions2" */))
 const _69dea486 = () => interopDefault(import('../pages/strategy.vue' /* webpackChunkName: "pages/strategy" */))
-const _2a2f1a84 = () => interopDefault(import('../pages/terms.vue' /* webpackChunkName: "pages/terms" */))
+const _b824428e = () => interopDefault(import('../pages/thank-you.vue' /* webpackChunkName: "pages/thank-you" */))
 const _3de7bd7c = () => interopDefault(import('../pages/solutions/_id.vue' /* webpackChunkName: "pages/solutions/_id" */))
 const _ff9d4762 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -50,9 +50,9 @@ export const routerOptions = {
     component: _69dea486,
     name: "strategy"
   }, {
-    path: "/terms",
-    component: _2a2f1a84,
-    name: "terms"
+    path: "/thank-you",
+    component: _b824428e,
+    name: "thank-you"
   }, {
     path: "/solutions/:id",
     component: _3de7bd7c,

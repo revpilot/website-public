@@ -7103,8 +7103,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_mail_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/mail.js */ "./utils/mail.js");
 
 const mail = new _utils_mail_js__WEBPACK_IMPORTED_MODULE_0__["Mail"]();
+const headers = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Headers': 'Content-Type',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'
+};
 
 exports.handler = async event => {
+  if (event.httpMethod === "OPTIONS") {
+    return {
+      statusCode: 200,
+      headers,
+      body: 'This was a preflight call!'
+    };
+  }
+
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 410,
@@ -7121,16 +7134,16 @@ exports.handler = async event => {
         <strong>Phone:</strong>  ${dataEvent.phone}.<br>
         <strong>Message:</strong>  ${dataEvent.message}.<br>
         `;
-    console.log(dataEvent);
     const result = await mail.sendMail({
-      from: `Rev Pilot <miguel@revpilot.co.uk>`,
+      from: `Miguel Puig <miguel@revpilot.co.uk>`,
       to: `miguel@revpilot.co.uk`,
       content: contentEmail,
       subject: `New contact revpilot.co.uk`,
-      bcc: ''
+      bcc: 'anish@revpilot.co.uk'
     });
     return {
       statusCode: 200,
+      headers,
       body: JSON.stringify(result)
     };
   } catch (err) {
@@ -7164,15 +7177,22 @@ class Mail {
   constructor() {}
 
   async sendMail(emailParams) {
-    const msg = {
-      to: emailParams.to,
-      from: `Rev Pilot <miguel@revpilot.co.uk>`,
-      bcc: emailParams.bcc,
-      subject: emailParams.subject,
-      html: emailParams.content
-    };
-    const dataSend = await sgMail.send(msg);
-    return dataSend;
+    try {
+      const msg = {
+        to: emailParams.to,
+        from: emailParams.from,
+        bcc: emailParams.bcc,
+        subject: emailParams.subject,
+        html: emailParams.content
+      };
+      console.log(msg);
+      const dataSend = await sgMail.send(msg);
+      console.log(JSON.stringify(dataSend));
+      return dataSend;
+    } catch (error) {
+      console.error(JSON.stringify(error));
+      return error.body;
+    }
   }
 
 }

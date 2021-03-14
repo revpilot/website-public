@@ -1,8 +1,12 @@
 const PrismicConfig = require("./prismic.config");
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
+  mode: 'universal',
   target: 'static',
-
+  env: {
+    liveUrl: process.env.LIVE_URL,
+    emailUrl: process.env.EMAIL_SEND_URL
+  },
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'Sales Sensei - Enabling world-class Sales & Marketing Execution',
@@ -60,7 +64,7 @@ export default {
   plugins: [
     '~/plugins/global.js'
   ],
-  
+
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,

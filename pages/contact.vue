@@ -55,26 +55,48 @@
           <form>
             <div class="form-group">
               <label class="text-dark"> Your name </label>
-              <input type="text" class="form-control form-control-lg" />
+              <input
+                type="text"
+                class="form-control form-control-lg"
+                placeholder="Full name"
+                v-model="formdata.name"
+              />
             </div>
             <div class="form-group">
-              <label class="text-dark"> Email address </label>
-              <input type="email" class="form-control form-control-lg" />
+              <label class="text-dark">Company Email address </label>
+              <input
+                type="email"
+                class="form-control form-control-lg"
+                placeholder="Company Email address"
+                v-model="formdata.email"
+              />
+              <div class="errorEmail mt-3 mb-3" v-if="isEmailValid() === 'has-error'">
+                Please write a valid email
+              </div>
             </div>
             <div class="form-group">
               <label class="text-dark"> Phone number </label>
-              <input type="phone" class="form-control form-control-lg" />
+              <input
+                type="phone"
+                class="form-control form-control-lg"
+                placeholder="Your phone number"
+                v-model="formdata.phone"
+              />
             </div>
             <div class="form-group">
-              <label class="text-dark"> Your message </label>
+              <label class="text-dark"> Message </label>
               <textarea
                 rows="4"
                 class="form-control form-control-lg"
+                placeholder="Your message"
+                v-model="formdata.message"
               ></textarea>
             </div>
 
             <input
               type="submit"
+              @click.stop.prevent="submit()"
+              :disabled="!btnEnabled || sending"
               value="Send Message"
               class="btn btn-block btn-success btn-lg hover-lift-light mt-4"
             />
@@ -96,17 +118,74 @@ import PrismicConfig from "~/prismic.config.js";
 import PrismicDOM from "prismic-dom";
 
 export default {
+  head() {
+    return {
+      title: "Contact SalesSensei",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "",
+        },
+      ],
+    };
+  },
   data: function () {
     return {
       document: null,
+      reg: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/,
       documentId: null,
       Dom: PrismicDOM,
+      loading: true,
+      sending: false,
+      formdata: {
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      },
     };
   },
   created() {
     this.$loadJSFiles();
   },
-
+  computed: {
+    btnEnabled() {
+      if (
+        this.formdata.name === "" ||
+        this.formdata.email === "" ||
+        this.formdata.phone === "" ||
+        this.formdata.message === ""
+      ) {
+        return false;
+      }
+      return true;
+    },
+  },
+  methods: {
+    isEmailValid: function () {
+      return this.formdata.email == ""
+        ? ""
+        : this.reg.test(this.formdata.email)
+        ? "has-success"
+        : "has-error";
+    },
+    async submit() {
+      this.sending = true;
+      try {
+        const res = await this.$axios.$post(
+          `${process.env.emailUrl}`,
+          this.formdata
+        );
+        console.log("res", res);
+        this.sending = false;
+        this.$router.push("/thank-you/");
+      } catch (error) {
+        console.error(error);
+        this.sending = false;
+      }
+    },
+  },
   async asyncData({ context, params, error, app, req, store }) {
     try {
       const api = await Prismic.getApi(PrismicConfig.apiEndpoint, { req });
@@ -125,3 +204,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.errorEmail{
+  color:red
+}
+</style>

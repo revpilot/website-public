@@ -52,7 +52,7 @@
         <div
           class="bg-white w-lg-60 rounded shadow-light-lg mx-auto py-5 px-4 px-md-6"
         >
-          <form name="contact"  method="POST" netlify>
+          <form name="contact" method="POST" netlify>
             <div class="form-group">
               <label class="text-dark"> Your name </label>
               <input
@@ -70,7 +70,10 @@
                 placeholder="Company Email address"
                 v-model="formdata.email"
               />
-              <div class="errorEmail mt-3 mb-3" v-if="isEmailValid() === 'has-error'">
+              <div
+                class="errorEmail mt-3 mb-3"
+                v-if="isEmailValid() === 'has-error'"
+              >
                 Please write a valid email
               </div>
             </div>
@@ -111,7 +114,6 @@
   </div>
 </template>
 
-
 <script>
 import Prismic from "prismic-javascript";
 import PrismicConfig from "~/prismic.config.js";
@@ -125,12 +127,12 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: "",
+          content: "Contact us for more information.",
         },
       ],
     };
   },
-  data: function () {
+  data: function() {
     return {
       document: null,
       reg: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/,
@@ -163,7 +165,7 @@ export default {
     },
   },
   methods: {
-    isEmailValid: function () {
+    isEmailValid: function() {
       return this.formdata.email == ""
         ? ""
         : this.reg.test(this.formdata.email)
@@ -175,7 +177,7 @@ export default {
       try {
         const res = await this.$axios.$post(
           `${process.env.emailUrl}`,
-          this.formdata,
+          this.formdata
         );
         console.log("res", res);
         this.sending = false;
@@ -206,7 +208,7 @@ export default {
 </script>
 
 <style scoped>
-.errorEmail{
-  color:red
+.errorEmail {
+  color: red;
 }
 </style>

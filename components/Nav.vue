@@ -27,12 +27,12 @@
           </li>
           <li class="nav-item dropdown">
             <NuxtLink
-              to="/about"
+              to="/cases"
               class="nav-link"
               data-toggle="dropdown"
               aria-expanded="false"
             >
-              About us
+              Case studies
             </NuxtLink>
           </li>
           <li class="nav-item dropdown">
@@ -61,3 +61,11 @@
     <!-- end .container -->
   </nav>
 </template>
+<style scoped>
+.nuxt-link-exact-active {
+  color: #cb6828 !important;
+}
+.nav-link{
+  font-weight: 600;
+}
+</style>

@@ -109,10 +109,10 @@ module.exports.Client = Client;
 /*!*****************************************************!*\
   !*** ../node_modules/@sendgrid/client/package.json ***!
   \*****************************************************/
-/*! exports provided: _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _shasum, _spec, _where, author, bugs, bundleDependencies, contributors, dependencies, deprecated, description, devDependencies, engines, gitHead, homepage, license, main, name, publishConfig, repository, tags, version, default */
+/*! exports provided: _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _shasum, _spec, _where, author, bugs, bundleDependencies, contributors, dependencies, deprecated, description, devDependencies, engines, gitHead, homepage, license, main, name, publishConfig, repository, resolutions, tags, version, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_from\":\"@sendgrid/client@^7.4.2\",\"_id\":\"@sendgrid/client@7.4.2\",\"_inBundle\":false,\"_integrity\":\"sha512-bu8lLbRD+OV7YsYNemEy8DRoxs8/8u325EXNlQ3VaqhcpbM0eSvdL5e5Wa7VZpbczcNCJmf/sr/uqFmwcO5S+A==\",\"_location\":\"/@sendgrid/client\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"range\",\"registry\":true,\"raw\":\"@sendgrid/client@^7.4.2\",\"name\":\"@sendgrid/client\",\"escapedName\":\"@sendgrid%2fclient\",\"scope\":\"@sendgrid\",\"rawSpec\":\"^7.4.2\",\"saveSpec\":null,\"fetchSpec\":\"^7.4.2\"},\"_requiredBy\":[\"/@sendgrid/mail\"],\"_resolved\":\"https://registry.npmjs.org/@sendgrid/client/-/client-7.4.2.tgz\",\"_shasum\":\"204a9fbb5dc05a721a5d8cd8930f57f9f8e612b1\",\"_spec\":\"@sendgrid/client@^7.4.2\",\"_where\":\"/Users/migue/Documents/dev/revpilot/web/node_modules/@sendgrid/mail\",\"author\":{\"name\":\"Twilio SendGrid\",\"email\":\"help@twilio.com\",\"url\":\"sendgrid.com\"},\"bugs\":{\"url\":\"https://github.com/sendgrid/sendgrid-nodejs/issues\"},\"bundleDependencies\":false,\"contributors\":[{\"name\":\"Kyle Partridge\",\"email\":\"kyle.partridge@sendgrid.com\"},{\"name\":\"David Tomberlin\",\"email\":\"david.tomberlin@sendgrid.com\"},{\"name\":\"Swift\",\"email\":\"swift@sendgrid.com\"},{\"name\":\"Brandon West\",\"email\":\"brandon.west@sendgrid.com\"},{\"name\":\"Scott Motte\",\"email\":\"scott.motte@sendgrid.com\"},{\"name\":\"Robert Acosta\",\"email\":\"robert.acosta@sendgrid.com\"},{\"name\":\"Elmer Thomas\",\"email\":\"ethomas@twilio.com\"},{\"name\":\"Adam Reis\",\"email\":\"adam@reis.nz\"}],\"dependencies\":{\"@sendgrid/helpers\":\"^7.4.2\",\"axios\":\"^0.21.1\"},\"deprecated\":false,\"description\":\"Twilio SendGrid NodeJS API client\",\"devDependencies\":{\"nock\":\"^10.0.6\"},\"engines\":{\"node\":\"6.* || 8.* || >=10.*\"},\"gitHead\":\"b2a7be0bd10ad3de154b4160a65e6c9f9b745094\",\"homepage\":\"https://sendgrid.com\",\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"@sendgrid/client\",\"publishConfig\":{\"access\":\"public\"},\"repository\":{\"type\":\"git\",\"url\":\"git://github.com/sendgrid/sendgrid-nodejs.git\"},\"tags\":[\"http\",\"rest\",\"api\",\"mail\",\"sendgrid\"],\"version\":\"7.4.2\"}");
+module.exports = JSON.parse("{\"_from\":\"@sendgrid/client@^7.4.3\",\"_id\":\"@sendgrid/client@7.4.3\",\"_inBundle\":false,\"_integrity\":\"sha512-tTaHx893w5iqG0sVtUnMyRchuwYF95k4UOkmov1MouMIeMUbNvbalITo7cG7YSXUTY9rT2t4eBY6HcEBCVeqfg==\",\"_location\":\"/@sendgrid/client\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"range\",\"registry\":true,\"raw\":\"@sendgrid/client@^7.4.3\",\"name\":\"@sendgrid/client\",\"escapedName\":\"@sendgrid%2fclient\",\"scope\":\"@sendgrid\",\"rawSpec\":\"^7.4.3\",\"saveSpec\":null,\"fetchSpec\":\"^7.4.3\"},\"_requiredBy\":[\"/@sendgrid/mail\"],\"_resolved\":\"https://registry.npmjs.org/@sendgrid/client/-/client-7.4.3.tgz\",\"_shasum\":\"bc71aae05de2cd9aa607f4eb1d886711d09f9595\",\"_spec\":\"@sendgrid/client@^7.4.3\",\"_where\":\"/Users/miguelpuig/Documents/dev/website-public/node_modules/@sendgrid/mail\",\"author\":{\"name\":\"Twilio SendGrid\",\"email\":\"help@twilio.com\",\"url\":\"sendgrid.com\"},\"bugs\":{\"url\":\"https://github.com/sendgrid/sendgrid-nodejs/issues\"},\"bundleDependencies\":false,\"contributors\":[{\"name\":\"Kyle Partridge\",\"email\":\"kyle.partridge@sendgrid.com\"},{\"name\":\"David Tomberlin\",\"email\":\"david.tomberlin@sendgrid.com\"},{\"name\":\"Swift\",\"email\":\"swift@sendgrid.com\"},{\"name\":\"Brandon West\",\"email\":\"brandon.west@sendgrid.com\"},{\"name\":\"Scott Motte\",\"email\":\"scott.motte@sendgrid.com\"},{\"name\":\"Robert Acosta\",\"email\":\"robert.acosta@sendgrid.com\"},{\"name\":\"Elmer Thomas\",\"email\":\"ethomas@twilio.com\"},{\"name\":\"Adam Reis\",\"email\":\"adam@reis.nz\"}],\"dependencies\":{\"@sendgrid/helpers\":\"^7.4.3\",\"axios\":\"^0.21.1\"},\"deprecated\":false,\"description\":\"Twilio SendGrid NodeJS API client\",\"devDependencies\":{\"chai\":\"4.2.0\",\"nock\":\"^10.0.6\"},\"engines\":{\"node\":\"6.* || 8.* || >=10.*\"},\"gitHead\":\"e918d6022c7ac763ba3c221921a16ab36d0b1e75\",\"homepage\":\"https://sendgrid.com\",\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"@sendgrid/client\",\"publishConfig\":{\"access\":\"public\"},\"repository\":{\"type\":\"git\",\"url\":\"git://github.com/sendgrid/sendgrid-nodejs.git\"},\"resolutions\":{\"chai\":\"4.2.0\"},\"tags\":[\"http\",\"rest\",\"api\",\"mail\",\"sendgrid\"],\"version\":\"7.4.3\"}");
 
 /***/ }),
 
@@ -2854,6 +2854,7 @@ class MailService {
       const request = {
         method: 'POST',
         url: '/v3/mail/send',
+        headers: mail.headers,
         body,
       };
 
@@ -5085,10 +5086,10 @@ module.exports = {
 /*!******************************************!*\
   !*** ../node_modules/axios/package.json ***!
   \******************************************/
-/*! exports provided: _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _shasum, _spec, _where, author, browser, bugs, bundleDependencies, bundlesize, dependencies, deprecated, description, devDependencies, homepage, jsdelivr, keywords, license, main, name, repository, scripts, typings, unpkg, version, default */
+/*! exports provided: _args, _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _spec, _where, author, browser, bugs, bundlesize, dependencies, description, devDependencies, homepage, jsdelivr, keywords, license, main, name, repository, scripts, typings, unpkg, version, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"_from\":\"axios@^0.21.1\",\"_id\":\"axios@0.21.1\",\"_inBundle\":false,\"_integrity\":\"sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==\",\"_location\":\"/axios\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"range\",\"registry\":true,\"raw\":\"axios@^0.21.1\",\"name\":\"axios\",\"escapedName\":\"axios\",\"rawSpec\":\"^0.21.1\",\"saveSpec\":null,\"fetchSpec\":\"^0.21.1\"},\"_requiredBy\":[\"/@nuxtjs/axios\"],\"_resolved\":\"https://registry.npmjs.org/axios/-/axios-0.21.1.tgz\",\"_shasum\":\"22563481962f4d6bde9a76d516ef0e5d3c09b2b8\",\"_spec\":\"axios@^0.21.1\",\"_where\":\"/Users/migue/Documents/dev/revpilot/web/node_modules/@nuxtjs/axios\",\"author\":{\"name\":\"Matt Zabriskie\"},\"browser\":{\"./lib/adapters/http.js\":\"./lib/adapters/xhr.js\"},\"bugs\":{\"url\":\"https://github.com/axios/axios/issues\"},\"bundleDependencies\":false,\"bundlesize\":[{\"path\":\"./dist/axios.min.js\",\"threshold\":\"5kB\"}],\"dependencies\":{\"follow-redirects\":\"^1.10.0\"},\"deprecated\":false,\"description\":\"Promise based HTTP client for the browser and node.js\",\"devDependencies\":{\"bundlesize\":\"^0.17.0\",\"coveralls\":\"^3.0.0\",\"es6-promise\":\"^4.2.4\",\"grunt\":\"^1.0.2\",\"grunt-banner\":\"^0.6.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-clean\":\"^1.1.0\",\"grunt-contrib-watch\":\"^1.0.0\",\"grunt-eslint\":\"^20.1.0\",\"grunt-karma\":\"^2.0.0\",\"grunt-mocha-test\":\"^0.13.3\",\"grunt-ts\":\"^6.0.0-beta.19\",\"grunt-webpack\":\"^1.0.18\",\"istanbul-instrumenter-loader\":\"^1.0.0\",\"jasmine-core\":\"^2.4.1\",\"karma\":\"^1.3.0\",\"karma-chrome-launcher\":\"^2.2.0\",\"karma-coverage\":\"^1.1.1\",\"karma-firefox-launcher\":\"^1.1.0\",\"karma-jasmine\":\"^1.1.1\",\"karma-jasmine-ajax\":\"^0.1.13\",\"karma-opera-launcher\":\"^1.0.0\",\"karma-safari-launcher\":\"^1.0.0\",\"karma-sauce-launcher\":\"^1.2.0\",\"karma-sinon\":\"^1.0.5\",\"karma-sourcemap-loader\":\"^0.3.7\",\"karma-webpack\":\"^1.7.0\",\"load-grunt-tasks\":\"^3.5.2\",\"minimist\":\"^1.2.0\",\"mocha\":\"^5.2.0\",\"sinon\":\"^4.5.0\",\"typescript\":\"^2.8.1\",\"url-search-params\":\"^0.10.0\",\"webpack\":\"^1.13.1\",\"webpack-dev-server\":\"^1.14.1\"},\"homepage\":\"https://github.com/axios/axios\",\"jsdelivr\":\"dist/axios.min.js\",\"keywords\":[\"xhr\",\"http\",\"ajax\",\"promise\",\"node\"],\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"axios\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/axios/axios.git\"},\"scripts\":{\"build\":\"NODE_ENV=production grunt build\",\"coveralls\":\"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\"examples\":\"node ./examples/server.js\",\"fix\":\"eslint --fix lib/**/*.js\",\"postversion\":\"git push && git push --tags\",\"preversion\":\"npm test\",\"start\":\"node ./sandbox/server.js\",\"test\":\"grunt test && bundlesize\",\"version\":\"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json\"},\"typings\":\"./index.d.ts\",\"unpkg\":\"dist/axios.min.js\",\"version\":\"0.21.1\"}");
+module.exports = JSON.parse("{\"_args\":[[\"axios@0.21.1\",\"/Users/miguelpuig/Documents/dev/website-public\"]],\"_from\":\"axios@0.21.1\",\"_id\":\"axios@0.21.1\",\"_inBundle\":false,\"_integrity\":\"sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==\",\"_location\":\"/axios\",\"_phantomChildren\":{},\"_requested\":{\"type\":\"version\",\"registry\":true,\"raw\":\"axios@0.21.1\",\"name\":\"axios\",\"escapedName\":\"axios\",\"rawSpec\":\"0.21.1\",\"saveSpec\":null,\"fetchSpec\":\"0.21.1\"},\"_requiredBy\":[\"/@nuxtjs/axios\",\"/@sendgrid/client\"],\"_resolved\":\"https://registry.npmjs.org/axios/-/axios-0.21.1.tgz\",\"_spec\":\"0.21.1\",\"_where\":\"/Users/miguelpuig/Documents/dev/website-public\",\"author\":{\"name\":\"Matt Zabriskie\"},\"browser\":{\"./lib/adapters/http.js\":\"./lib/adapters/xhr.js\"},\"bugs\":{\"url\":\"https://github.com/axios/axios/issues\"},\"bundlesize\":[{\"path\":\"./dist/axios.min.js\",\"threshold\":\"5kB\"}],\"dependencies\":{\"follow-redirects\":\"^1.10.0\"},\"description\":\"Promise based HTTP client for the browser and node.js\",\"devDependencies\":{\"bundlesize\":\"^0.17.0\",\"coveralls\":\"^3.0.0\",\"es6-promise\":\"^4.2.4\",\"grunt\":\"^1.0.2\",\"grunt-banner\":\"^0.6.0\",\"grunt-cli\":\"^1.2.0\",\"grunt-contrib-clean\":\"^1.1.0\",\"grunt-contrib-watch\":\"^1.0.0\",\"grunt-eslint\":\"^20.1.0\",\"grunt-karma\":\"^2.0.0\",\"grunt-mocha-test\":\"^0.13.3\",\"grunt-ts\":\"^6.0.0-beta.19\",\"grunt-webpack\":\"^1.0.18\",\"istanbul-instrumenter-loader\":\"^1.0.0\",\"jasmine-core\":\"^2.4.1\",\"karma\":\"^1.3.0\",\"karma-chrome-launcher\":\"^2.2.0\",\"karma-coverage\":\"^1.1.1\",\"karma-firefox-launcher\":\"^1.1.0\",\"karma-jasmine\":\"^1.1.1\",\"karma-jasmine-ajax\":\"^0.1.13\",\"karma-opera-launcher\":\"^1.0.0\",\"karma-safari-launcher\":\"^1.0.0\",\"karma-sauce-launcher\":\"^1.2.0\",\"karma-sinon\":\"^1.0.5\",\"karma-sourcemap-loader\":\"^0.3.7\",\"karma-webpack\":\"^1.7.0\",\"load-grunt-tasks\":\"^3.5.2\",\"minimist\":\"^1.2.0\",\"mocha\":\"^5.2.0\",\"sinon\":\"^4.5.0\",\"typescript\":\"^2.8.1\",\"url-search-params\":\"^0.10.0\",\"webpack\":\"^1.13.1\",\"webpack-dev-server\":\"^1.14.1\"},\"homepage\":\"https://github.com/axios/axios\",\"jsdelivr\":\"dist/axios.min.js\",\"keywords\":[\"xhr\",\"http\",\"ajax\",\"promise\",\"node\"],\"license\":\"MIT\",\"main\":\"index.js\",\"name\":\"axios\",\"repository\":{\"type\":\"git\",\"url\":\"git+https://github.com/axios/axios.git\"},\"scripts\":{\"build\":\"NODE_ENV=production grunt build\",\"coveralls\":\"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js\",\"examples\":\"node ./examples/server.js\",\"fix\":\"eslint --fix lib/**/*.js\",\"postversion\":\"git push && git push --tags\",\"preversion\":\"npm test\",\"start\":\"node ./sandbox/server.js\",\"test\":\"grunt test && bundlesize\",\"version\":\"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json\"},\"typings\":\"./index.d.ts\",\"unpkg\":\"dist/axios.min.js\",\"version\":\"0.21.1\"}");
 
 /***/ }),
 
@@ -6249,8 +6250,9 @@ var assert = __webpack_require__(/*! assert */ "assert");
 var debug = __webpack_require__(/*! ./debug */ "../node_modules/follow-redirects/debug.js");
 
 // Create handlers that pass events from native requests
+var events = ["abort", "aborted", "connect", "error", "socket", "timeout"];
 var eventHandlers = Object.create(null);
-["abort", "aborted", "connect", "error", "socket", "timeout"].forEach(function (event) {
+events.forEach(function (event) {
   eventHandlers[event] = function (arg1, arg2, arg3) {
     this._redirectable.emit(event, arg1, arg2, arg3);
   };
@@ -6302,6 +6304,11 @@ function RedirectableRequest(options, responseCallback) {
   this._performRequest();
 }
 RedirectableRequest.prototype = Object.create(Writable.prototype);
+
+RedirectableRequest.prototype.abort = function () {
+  abortRequest(this._currentRequest);
+  this.emit("abort");
+};
 
 // Writes buffered data to the current native request
 RedirectableRequest.prototype.write = function (data, encoding, callback) {
@@ -6382,40 +6389,58 @@ RedirectableRequest.prototype.removeHeader = function (name) {
 
 // Global timeout for all underlying requests
 RedirectableRequest.prototype.setTimeout = function (msecs, callback) {
+  var self = this;
   if (callback) {
-    this.once("timeout", callback);
+    this.on("timeout", callback);
   }
 
+  function destroyOnTimeout(socket) {
+    socket.setTimeout(msecs);
+    socket.removeListener("timeout", socket.destroy);
+    socket.addListener("timeout", socket.destroy);
+  }
+
+  // Sets up a timer to trigger a timeout event
+  function startTimer(socket) {
+    if (self._timeout) {
+      clearTimeout(self._timeout);
+    }
+    self._timeout = setTimeout(function () {
+      self.emit("timeout");
+      clearTimer();
+    }, msecs);
+    destroyOnTimeout(socket);
+  }
+
+  // Prevent a timeout from triggering
+  function clearTimer() {
+    clearTimeout(this._timeout);
+    if (callback) {
+      self.removeListener("timeout", callback);
+    }
+    if (!this.socket) {
+      self._currentRequest.removeListener("socket", startTimer);
+    }
+  }
+
+  // Start the timer when the socket is opened
   if (this.socket) {
-    startTimer(this, msecs);
+    startTimer(this.socket);
   }
   else {
-    var self = this;
-    this._currentRequest.once("socket", function () {
-      startTimer(self, msecs);
-    });
+    this._currentRequest.once("socket", startTimer);
   }
 
+  this.on("socket", destroyOnTimeout);
   this.once("response", clearTimer);
   this.once("error", clearTimer);
 
   return this;
 };
 
-function startTimer(request, msecs) {
-  clearTimeout(request._timeout);
-  request._timeout = setTimeout(function () {
-    request.emit("timeout");
-  }, msecs);
-}
-
-function clearTimer() {
-  clearTimeout(this._timeout);
-}
-
 // Proxy all other public ClientRequest methods
 [
-  "abort", "flushHeaders", "getHeader",
+  "flushHeaders", "getHeader",
   "setNoDelay", "setSocketKeepAlive",
 ].forEach(function (method) {
   RedirectableRequest.prototype[method] = function (a, b) {
@@ -6485,11 +6510,8 @@ RedirectableRequest.prototype._performRequest = function () {
 
   // Set up event handlers
   request._redirectable = this;
-  for (var event in eventHandlers) {
-    /* istanbul ignore else */
-    if (event) {
-      request.on(event, eventHandlers[event]);
-    }
+  for (var e = 0; e < events.length; e++) {
+    request.on(events[e], eventHandlers[events[e]]);
   }
 
   // End a redirected request
@@ -6547,9 +6569,7 @@ RedirectableRequest.prototype._processResponse = function (response) {
   if (location && this._options.followRedirects !== false &&
       statusCode >= 300 && statusCode < 400) {
     // Abort the current request
-    this._currentRequest.removeAllListeners();
-    this._currentRequest.on("error", noop);
-    this._currentRequest.abort();
+    abortRequest(this._currentRequest);
     // Discard the remainder of the response to avoid waiting for data
     response.destroy();
 
@@ -6739,6 +6759,14 @@ function createErrorType(code, defaultMessage) {
   CustomError.prototype.name = "Error [" + code + "]";
   CustomError.prototype.code = code;
   return CustomError;
+}
+
+function abortRequest(request) {
+  for (var e = 0; e < events.length; e++) {
+    request.removeListener(events[e], eventHandlers[events[e]]);
+  }
+  request.on("error", noop);
+  request.abort();
 }
 
 // Exports

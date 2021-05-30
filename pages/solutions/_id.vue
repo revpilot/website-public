@@ -8,7 +8,7 @@
           <div class="position-sticky" style="top: 20px">
             <NuxtLink
               :to="`/solutions/`"
-              class="text-purple border-bottom border-gray-200 d-block py-3"
+              class="text-dark border-bottom border-gray-200 d-block py-3"
             >
               <i class="fas fa-arrow-left fa-xs mr-2"></i>
               <span> Back to Solutions</span>
@@ -19,7 +19,10 @@
               v-for="(item, index) in allSols"
               :key="index"
             >
-              <h4 v-html="Dom.RichText.asText(item.title)"></h4>
+              <h4
+                v-html="Dom.RichText.asText(item.title)"
+                class="main-headmen"
+              ></h4>
 
               <div
                 class="text-dark py-1"
@@ -28,13 +31,13 @@
               >
                 <NuxtLink
                   :to="`/solutions/${item2.url}`"
-                  class="text-purple"
+                  class="text-muted"
                   v-if="item2.url !== uid"
                 >
                   <span v-html="item2.title"></span>
                 </NuxtLink>
 
-                <span class="text-dark" v-if="item2.url === uid">
+                <span class="text-white darksel" v-if="item2.url === uid">
                   <span v-html="item2.title"></span>
                 </span>
               </div>
@@ -83,20 +86,43 @@
   </div>
 </template>
 
-
+<style scoped>
+.main-headmen {
+  background: #cb6828;
+  color: #ffffff;
+  padding: 8px 9px;
+}
+.darksel {
+  background: black;
+  color: white;
+  padding: 5px 6px;
+}
+</style>
 <script>
 import _ from "lodash";
 import Prismic from "prismic-javascript";
 import PrismicConfig from "~/prismic.config.js";
 import PrismicDOM from "prismic-dom";
 export default {
-  data: function () {
+  data: function() {
     return {
       solutions: {},
-
+      thePageOne: { title: "", small_text: "" },
       document: {
         title: "",
       },
+    };
+  },
+  head() {
+    return {
+      title: `SalesSensei - ${this.thePageOne.title}`,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.Dom.RichText.asText(this.thePageOne.small_text),
+        },
+      ],
     };
   },
   created() {
@@ -115,13 +141,13 @@ export default {
       let solutions = result.data;
 
       const solutions_all = {
-        sales_enablement: {
-          title: solutions.sales_enablement_title,
-          items: solutions.enablement_items,
-        },
         sales_operations: {
           title: solutions.sales_operations_title,
           items: solutions.operations_items,
+        },
+        sales_enablement: {
+          title: solutions.sales_enablement_title,
+          items: solutions.enablement_items,
         },
         sales_transformation: {
           title: solutions.sales_transformation_title,
@@ -134,13 +160,13 @@ export default {
       };
 
       let solsItems = [
-        ...solutions_all.sales_enablement.items,
         ...solutions_all.sales_operations.items,
+        ...solutions_all.sales_enablement.items,
         ...solutions_all.sales_transformation.items,
         ...solutions_all.subscription_service.items,
       ];
 
-      let thePageOne = _.filter(solsItems, function (o) {
+      let thePageOne = _.filter(solsItems, function(o) {
         return o.url === params.id;
       });
 

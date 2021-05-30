@@ -33,7 +33,7 @@
       </div>
     </section>
 
-    <section class="bg-sky pt-5 pb-5">
+    <section class="bg-sky pt-5 pb-5" id="sales_operations">
       <!-- Sales Operations -->
       <div class="container">
         <div class="row">
@@ -55,7 +55,7 @@
             v-for="(item, index) in document.operations_items"
             :key="index"
           >
-            <div class="card rounded-lg shadow-light hover-lift-light">
+            <div class="card rounded-lg shadow-lg hover-lift-light h-100">
               <div class="card-body">
                 <div class="text-dark mt-4">
                   <h4 v-html="item.title"></h4>
@@ -79,7 +79,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-light pt-5 pb-5">
+    <section class="bg-light pt-5 pb-5" id="sales_enablement">
       <!-- Sales enablement -->
       <div class="container">
         <div class="row">
@@ -103,7 +103,7 @@
             v-for="(item, index) in document.enablement_items"
             :key="index"
           >
-            <div class="card rounded-lg shadow-light hover-lift-light">
+            <div class="card rounded-lg shadow-lg hover-lift-light h-100">
               <div class="card-body">
                 <div class="text-dark mt-4">
                   <h4 v-html="item.title"></h4>
@@ -127,7 +127,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-sky pt-5 pb-5">
+    <section class="bg-sky pt-5 pb-5" id="sales_transformation">
       <!-- Sales transformation service -->
       <div class="container">
         <div class="row">
@@ -137,7 +137,7 @@
               v-html="Dom.RichText.asHtml(document.sales_transformation_title)"
             ></div>
             <div
-              class="text-white"
+              class="text-dark"
               v-html="
                 Dom.RichText.asHtml(
                   document.sales_transformation_small_description
@@ -152,7 +152,7 @@
             v-for="(item, index) in document.transformation_items"
             :key="index"
           >
-            <div class="card rounded-lg shadow-light hover-lift-light">
+            <div class="card rounded-lg shadow-lg hover-lift-light h-100">
               <div class="card-body">
                 <div class="text-dark mt-4">
                   <h4 v-html="item.title"></h4>
@@ -187,7 +187,7 @@
               v-html="Dom.RichText.asHtml(document.sub_service_title)"
             ></div>
             <div
-              class="text-white"
+              class="text-dark"
               v-html="
                 Dom.RichText.asHtml(document.sub_service_small_description)
               "
@@ -196,11 +196,11 @@
         </div>
         <div class="row mt-5">
           <div
-            class="col-md-4 mb-5"
+            class="col-md-4 mb-7"
             v-for="(item, index) in document.sub_service_items"
             :key="index"
           >
-            <div class="card rounded-lg shadow-light hover-lift-light">
+            <div class="card rounded-lg shadow-lg hover-lift-light h-100">
               <div class="card-body">
                 <div class="text-dark mt-4">
                   <h4 v-html="item.title"></h4>
@@ -232,15 +232,27 @@
   </div>
 </template>
 
-
-
 <script>
 import Prismic from "prismic-javascript";
 import PrismicConfig from "~/prismic.config.js";
 import PrismicDOM from "prismic-dom";
 
 export default {
-  data: function () {
+  head() {
+    return {
+      title: `SalesSensei - Solutions`,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: `SalesSensei - ${this.Dom.RichText.asText(
+            this.document.description
+          )}`,
+        },
+      ],
+    };
+  },
+  data: function() {
     return {
       document: null,
       documentId: null,

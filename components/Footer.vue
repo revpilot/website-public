@@ -6,7 +6,7 @@
         <NuxtLink to="/solutions" class="footer-link mt-2">
           Solutions
         </NuxtLink>
-        <NuxtLink to="/about" class="footer-link mt-2"> About us </NuxtLink>
+        <NuxtLink to="/cases" class="footer-link mt-2"> Case studies </NuxtLink>
         <NuxtLink to="/contact" class="footer-link mt-2"> Contact us </NuxtLink>
       </div>
     </div>
@@ -41,25 +41,30 @@
         <NuxtLink to="/privacy" class="footer-text mx-3"
           >Privacy & terms
         </NuxtLink>
-
-        <NuxtLink to="/terms" class="footer-text mx-3"
-          >Terms of service
-        </NuxtLink>
       </div>
     </div>
 
     <div class="mt-6">
       <div class="footer-brand">
-        <logo-colour color="#3f5683" size="195px" />
+        <NuxtLink to="/">
+          <img src="~/assets/logo/logo_icon1_white.png" class="logo-bottom" />
+        </NuxtLink>
+        <br />
+        SalesSensei
       </div>
     </div>
   </div>
 </template>
+<style scoped>
+.logo-bottom {
+  width: 60px;
+}
+</style>
 <script>
 import LogoColour from "./LogoColour.vue";
 export default {
   components: { LogoColour },
-  data: function () {
+  data: function() {
     return {};
   },
 };
